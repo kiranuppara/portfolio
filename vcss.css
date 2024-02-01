@@ -46,8 +46,6 @@
   padding: 10px;
 }
 
-/**************/
-
 #container {
   width: 30vw;
   aspect-ratio: 1;
@@ -60,6 +58,7 @@
   left: 35%;
   top: -7%;
 }
+
 #container a {
   position: absolute;
   text-decoration: none;
@@ -68,28 +67,33 @@
   font-weight: 700;
   font-family: cursive;
 }
+
 #container span {
   color: rgb(255, 255, 255);
   font-weight: 300;
   font-size: 10px;
   padding-top: 100px;
 }
-.left {
-  background-color: red;
+
+.left,
+.right {
   height: 12vw;
   aspect-ratio: 1/1.5;
   border-radius: 50% 50% 0% 0%;
+}
+
+.left {
+  background-color: red;
   rotate: -47deg;
   translate: 30%;
 }
+
 .right {
   background-color: red;
-  height: 12vw;
-  aspect-ratio: 1/1.5;
-  border-radius: 50% 50% 0% 0%;
   rotate: 47deg;
   translate: -30%;
 }
+
 @keyframes Beat {
   0% {
     transform: scale(120%);
@@ -115,6 +119,7 @@ h2 {
   text-align: center;
   animation: flicker 0.5s ease-in-out infinite alternate;
 }
+
 @keyframes flicker {
   0% {
     opacity: 0.8;
@@ -128,7 +133,7 @@ h2 {
 
 h1 {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 4vw;
   font-weight: bold;
   font-family: cursive;
   letter-spacing: 7px;
@@ -136,34 +141,28 @@ h1 {
   position: absolute;
   bottom: 30%;
 }
+
 h1 span {
   transition: 0.2s linear;
 }
+
 h1:hover span:nth-child(1) {
   margin-right: 5px;
 }
+
 h1:hover span:nth-child(1):after {
   content: "💖";
 }
+
 h1:hover span:nth-child(2) {
   margin-left: 30px;
 }
+
 h1:hover span {
   color: #fff;
   text-shadow: 0 0 10px #da2626, 0 0 20px #e74343, 0 0 40px #fff;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  h2,
-  p {
-    font-size: 10px;
-  }
-  .left {
-    height: 22vw;
-  }
-  .right {
-    height: 22vw;
-  }
-}
+
 @media only screen and (max-width: 768px) {
   #container {
     width: 70vw;
